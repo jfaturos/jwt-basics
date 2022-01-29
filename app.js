@@ -4,7 +4,7 @@ require('dotenv').config();
 /* Dependencies */
 
 /* GLOBAL variables */
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 /* GLOBAL variables */
 
 const app = express();
