@@ -1,6 +1,7 @@
 /* Dependencies */
 const express = require('express');
 require('dotenv').config();
+require('express-async-errors');
 /* Dependencies */
 
 /* GLOBAL variables */
