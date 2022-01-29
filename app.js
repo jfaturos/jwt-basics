@@ -5,6 +5,7 @@ require('express-async-errors');
 /* Dependencies */
 
 const mainRouter = require('./routes/main')
+const errorHandlerMiddleware = require('./middleware/error-handler');
 
 /* GLOBAL variables */
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/api/v1', mainRouter);
+app.use(errorHandlerMiddleware);
 /* Middleware */
 
 app.listen(PORT, () => {
