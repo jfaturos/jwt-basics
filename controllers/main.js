@@ -1,4 +1,18 @@
 const login = async (req, res) => {
+    const {
+        username,
+        password
+    } = req.body;
+
+    // TODO: Validations
+    // mongo
+    // Joi
+    // check in the controller
+    if (!username || !password) {
+        throw new Error('Please provide email and password');
+    }
+
+    console.log(username, password)
     res.send('Fake Login/Register/Signup');
 }
 
