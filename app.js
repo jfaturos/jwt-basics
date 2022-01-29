@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+/* Middleware */
+app.use(express.json());
+/* Middleware */
+
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 })
