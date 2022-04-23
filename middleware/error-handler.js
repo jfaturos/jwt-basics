@@ -12,7 +12,8 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 
     // all other errors
     return res.status(500).json({
-        message: `Something went wrong`
+        message: `Something went wrong`,
+        exception: err.message
     })
 }
 
